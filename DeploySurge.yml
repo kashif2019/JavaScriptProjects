@@ -26,7 +26,7 @@ jobs:
       - name: Installing Node
         uses: actions/setup-node@v2-beta|
         with:
-          node-version: "12'
+          node-version: '12'
           
       # Step to Install Surge    
       - name: Setup Surge    
@@ -34,8 +34,7 @@ jobs:
          
       # Deploy App to Surge   
       - name: Deploying Project to Surge    
-          
-          
+        run:  surge ./ kashifhussain_jsprojects.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
           
       # Runs a set of commands using the runners shell
       - name: Installing Node
